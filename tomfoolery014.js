@@ -9,7 +9,7 @@ G.AddData({
         new G.Res({
            name:'gun',
            desc: '[gun]s a highly efficent weapons that can be used for hunting.',
-           icon:[9,5,'iconSheet'],
+           //icon:[9,5,'iconSheet'],
            turnToByContext:{'decay':{'gun':1}},
            partOf:'gear'
         });
