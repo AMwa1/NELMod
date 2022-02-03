@@ -13,7 +13,7 @@ G.AddData({
             turnToByContext:{},
             partOf:'gear'
         });
-
+        /*
         // Augment base data.
         G.getDict('artisan').modes['make gun']={name:'Make guns',desc:'Use [hard metal ingot]s to make guns',req:{'gun making':true}, use:{'metal tools':1}};
         G.getDict('artisan').effects.push({type:'convert', from:{'hard metal ingot':3}, into:{'gun':1}, every:3,mode:'make gun'});
@@ -29,5 +29,6 @@ G.AddData({
             cost:{'insight':25},
             req:{'iron-working':true, 'bows':true}
         });
+        */
     }
 });
