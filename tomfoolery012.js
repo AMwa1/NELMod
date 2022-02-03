@@ -6,7 +6,7 @@ G.AddData({
     requires:['Default dataset*'],
     func:function(){
         // Add new resource.
-        new G.res({
+        new G.Res({
            name:'gun',
            desc: '[gun]s a highly efficent weapons that can be used for hunting.',
            icon:[9,5,'iconSheet'],
