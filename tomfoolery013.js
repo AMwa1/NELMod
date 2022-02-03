@@ -10,7 +10,7 @@ G.AddData({
            name:'gun',
            desc: '[gun]s a highly efficent weapons that can be used for hunting.',
            icon:[9,5,'iconSheet'],
-           turnToByContext:{},
+           turnToByContext:{'decay':{'gun':1}},
            partOf:'gear'
         });
     }
