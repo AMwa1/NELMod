@@ -9,7 +9,7 @@ G.AddData({
         new G.Res({
            name:'gun',
            desc: 'pew',
-           icon:'https://wwwassets.rand.org/content/rand/research/gun-policy/key-findings/what-science-tells-us-about-the-effects-of-gun-policies/jcr:content/par/teaser_copy_copy.aspectfit.0x1200.jpg/1557869169124.jpg',
+           icon:['https://wwwassets.rand.org/content/rand/research/gun-policy/key-findings/what-science-tells-us-about-the-effects-of-gun-policies/jcr:content/par/teaser_copy_copy.aspectfit.0x1200.jpg/1557869169124.jpg'],
            displayUsed: true,
            category:'gear'
         });
