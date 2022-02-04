@@ -5,13 +5,26 @@ G.AddData({
     engineVersion:1,
     requires:['Default dataset*'],
     func:function(){
-        // Add new resource.
+        // Add new resources.
         new G.Res({
            name:'gun',
            desc: 'pew',
            icon:[5,5],
            displayUsed: true,
            category:'gear'
+        });
+        
+        new G.Res({
+           name:'ash',
+           desc:'Ashes of people who were cremated. Produces some [faith].',
+           icon:[12,8],
+           partOf:'misc materials',
+           category:'misc',
+           tick:function(me,tick){
+               var toSpoil = me.amount*0.01;
+               var spent = G.lose(me.name, randomFloor(toSpoil), 'decay');
+               G.pseudoGather(G.getRes('faith'), randomFloor(spent));
+           };
         });
         
         // Augment base data for Artisan.
