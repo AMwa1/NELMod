@@ -15,7 +15,7 @@ G.AddData({
            category:'gear'
         });
         
-        new G.Res({
+        /*new G.Res({
            name:'ash',
            desc:'Ashes of people who were cremated. Produces some [faith].',
            icon:[12,8],
@@ -26,7 +26,7 @@ G.AddData({
                var spent = G.lose(me.name, randomFloor(toSpoil), 'decay');
                G.pseudoGather(G.getRes('faith'), randomFloor(spent));
            };
-        });
+        });*/
         
         // Augment base data for Artisan.
         G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
