@@ -21,11 +21,11 @@ G.AddData({
            icon:[12,8],
            partOf:'misc materials',
            category:'misc',
-           /*tick:function(me,tick){
+           tick:function(me,tick){
                var toSpoil = me.amount*0.01;
                var spent = G.lose(me.name, randomFloor(toSpoil), 'decay');
                G.pseudoGather(G.getRes('faith'), randomFloor(spent));
-           };*/
+           };
         });
         
         // Augment base data for Artisan.
@@ -55,5 +55,5 @@ G.AddData({
             icon:[8,3],
             cost:{'insight':25,'faith':2},
             req:{'burial':true, 'fire-making':true, 'fear of death':true}
-    }
+        });
 });
