@@ -5,6 +5,7 @@ G.AddData({
     engineVersion:1,
     //manifest:'ModManifest.js',
     requires:['Default dataset*'],
+    sheets:{}
     func:function(){
         // Add new resources.
         new G.Res({
