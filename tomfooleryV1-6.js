@@ -1,9 +1,10 @@
 G.AddData({
-    name:'Default dataset',
+    name:'tomfoolery',
     author:'AMwa1',
     desc:'A mod that engages in a high level of tomfoolery.',
     engineVersion:1,
     manifest:'ModManifest.js',
+    requires:'Default dataset*',
     func:function(){
         // Add new resources.
         new G.Res({
@@ -30,4 +31,5 @@ G.AddData({
            cost:{'insight':50},
            req:{'iron-working':true, 'bows':true}
         });
+    } 
 });
