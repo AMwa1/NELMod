@@ -1,6 +1,6 @@
 G.AddData({
-    name:'tomfoolery mod',
-    author:'AM',
+    name:'Default dataset',
+    author:'AMwa1',
     desc:'A mod that engages in a high level of tomfoolery.',
     engineVersion:1,
     manifest:'ModManifest.js',
