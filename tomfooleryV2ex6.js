@@ -1,6 +1,6 @@
 G.AddData({
-    name:'tomfoolery mod',
-    author:'AM',
+    name:'tomfoolery',
+    author:'AMwa1',
     desc:'A mod that engages in a high level of tomfoolery.',
     engineVersion:1,
     manifest:'ModManifest.js',
@@ -51,9 +51,10 @@ G.AddData({
         
         new G.Tech({
             name:'cremation',
-            desc:'[firekeeper]s can now cremate [corpse]s, turning them into [ash].',
+            desc:'[firekeeper]s can now cremate [corpse]s, turning them into [ash]. This is a somewhat religous process.',
             icon:[8,3],
             cost:{'insight':25,'faith':2},
             req:{'burial':true, 'fire-making':true, 'fear of death':true}
         });
+    }
 });
