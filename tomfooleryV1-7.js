@@ -4,7 +4,7 @@ G.AddData({
     desc:'A mod that engages in a high level of tomfoolery.',
     engineVersion:1,
     manifest:'ModManifest.js',
-    requires:'Default dataset*',
+    requires:['Default dataset*'],
     func:function(){
         // Add new resources.
         new G.Res({
