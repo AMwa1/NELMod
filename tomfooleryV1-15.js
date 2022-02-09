@@ -27,6 +27,7 @@ G.AddData({
         // Augment base data for Woodcutter to allow use of stone and metal tools, not just knapped tools.
         G.getDict('woodcutter').use={};
         G.getDict('woodcutter').staff={};
+        G.getDict('woodcutter').cost={'food':2};
         G.getDict('woodcutter').gizmos=true;
         G.getDict('woodcutter').modes['cut wood']={name:'Cut Wood',icon:[0,9],desc:'Use [knapped tools] to cut down trees.',use:{'worker':1,'knapped tools':1}};
         G.getDict('woodcutter').modes['advanced cut wood']={name:'Advanced Cut Wood',icon:[1,9],desc:'Use [stone tools] to cut down trees.',use:{'worker':1,'stone tools':1},req:{'tool-making':true}};
