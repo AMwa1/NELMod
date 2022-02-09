@@ -26,8 +26,10 @@ G.AddData({
         
         // Augment base data for Woodcutter to allow use of stone and metal tools, not just knapped tools.
         G.getDict('woodcutter').gizmos=true;
-        G.getDict('woodcutter').modes['advanced cut wood']={name:'Advanced Cut Wood',icon:[0,0],desc:'Use [stone tool]s to cut down trees.',use:{'worker':1,'stone tools':1},req:{'tool-making':true}};
-        G.getDict('woodcutter').modes['advanceder cut wood']={name:'Better Advanced Cut Wood',icon:[0,0],desc:'Use [metal tool]s to cut down trees.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
+        G.getDict('woodcutter').modes['cut wood']={name:'Cut Wood',icon:[0,9],desc:'Use [knapped tool]s to cut down trees.',use:{'worker':1,'knapped tools':1}};
+        G.getDict('woodcutter').modes['advanced cut wood']={name:'Advanced Cut Wood',icon:[1,9],desc:'Use [stone tool]s to cut down trees.',use:{'worker':1,'stone tools':1},req:{'tool-making':true}};
+        G.getDict('woodcutter').modes['advanceder cut wood']={name:'Better Advanced Cut Wood',icon:[2,9],desc:'Use [metal tool]s to cut down trees.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
+        G.getDict('woodcutter').effects.push({type:'gather',context:'chop',amount:1,max:1,mode:'cut wood'});
         G.getDict('woodcutter').effects.push({type:'gather',context:'chop',amount:2,max:2,mode:'advanced cut wood'});
         G.getDict('woodcutter').effects.push({type:'gather',context:'chop',amount:3,max:3,mode:'advanceder cut wood'});
         
