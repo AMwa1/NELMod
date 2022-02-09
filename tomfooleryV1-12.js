@@ -25,6 +25,8 @@ G.AddData({
         G.getDict('hunter').effects.push({type:'gather',context:'hunt',amount:7,max:9,mode:'shoot'});
         
         // Augment base data for Woodcutter to allow use of stone and metal tools, not just knapped tools.
+        G.getDict('woodcutter').use={};
+        G.getDict('woodcutter').staff=null;
         G.getDict('woodcutter').gizmos=true;
         G.getDict('woodcutter').modes['cut wood']={name:'Cut Wood',icon:[0,9],desc:'Use [knapped tool]s to cut down trees.',use:{'worker':1,'knapped tools':1}};
         G.getDict('woodcutter').modes['advanced cut wood']={name:'Advanced Cut Wood',icon:[1,9],desc:'Use [stone tool]s to cut down trees.',use:{'worker':1,'stone tools':1},req:{'tool-making':true}};
