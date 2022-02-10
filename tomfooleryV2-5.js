@@ -31,7 +31,7 @@ G.AddData({
         
         // Add new units.
         // Scientist unit. Generates science.
-        new G.Unit({
+        /*new G.Unit({
            name:'scientist',
            desc:'A person dedicated to science to guide your tribe. Generates [science].',
            icon:[6,4],
@@ -45,7 +45,7 @@ G.AddData({
            req:'neverending quest for knowledge',
            category:'discovery',
            priority:6
-        });
+        });*/
         
         // Augment base data for Blacksmith Workshop to allow for gun smithing.
         G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
