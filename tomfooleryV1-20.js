@@ -52,10 +52,10 @@ G.AddData({
         wipeAndGizmo('healer');
         G.getDict('healer').modes['heal']={name:'Heal',icon:[23,3],desc:'Use [knapped tools] and [herb]s to slowly heal sick and wounded people.',use:{'worker':1,'knapped tools':1}};
         G.getDict('healer').modes['better heal']={name:'Better Healing',icon:[9,5],desc:'Use [metal tools], [herb]s, [fruit], and [water] to heal sick and wounded people faster.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
-        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':2.5},into:{'adult':1},chance:1/3,every:4,mode:'heal'});
-        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':2.5},into:{'adult':1},chance:1/4,every:3,mode:'heal'});
-        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:5/8,every:2});
-        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:1/2,every:2});
+        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':2.5},into:{'adult':1},chance:3/16,every:5,mode:'heal'});
+        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':2.5},into:{'adult':1},chance:1/8,every:4.5,mode:'heal'});
+        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:1/4,every:3});
+        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:1/2,every:3});
         
         // Add new techs.
         // Gun smithing tech, allows blacksmiths to make guns.
