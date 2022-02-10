@@ -39,6 +39,24 @@ G.AddData({
         G.getDict('woodcutter').effects.push({type:'gather',context:'chop',amount:2,max:2,mode:'advanced cut wood'});
         G.getDict('woodcutter').effects.push({type:'gather',context:'chop',amount:3,max:3,mode:'advanceder cut wood'});
         
+        // Augment base data for Digger to allow use of better tools.
+        wipeAndGizmo('digger');
+        G.getDict('digger').modes['dig']={name:'Dig',icon:[0,9],desc:'Use [knapped tools] to dig.',use:{'worker':1,'knapped tools':1}};
+        G.getDict('digger').modes['advanced dig']={name:'Advanced Dig',icon:[1,9],desc:'Use [stone tools] to dig.',use:{'worker':1,'stone tools':1},req:{'tool-making':true}};
+        G.getDict('digger').modes['advanceder dig']={name:'Better Advanced Dig',icon:[2,9],desc:'Use [metal tools] to dig.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
+        G.getDict('digger').effects.push({type:'gather',context:'dig',amount:1,max:1,mode:'dig'});
+        G.getDict('digger').effects.push({type:'gather',context:'dig',amount:2,max:2,mode:'advanced dig'});
+        G.getDict('digger').effects.push({type:'gather',context:'dig',amount:3,max:3,mode:'advanceder dig'});
+        
+        // Augment base data for Healer to allow for better healing as tech progresses.
+        wipeAndGizmo('healer');
+        G.getDict('healer').modes['heal']={name:'Heal',icon:[23,3],desc:'Use [knapped tools] and [herb]s to slowly heal sick and wounded people.',use:{'worker':1,'knapped tools':1}};
+        G.getDict('healer').modes['better heal']={name:'Better Healing',icon:[9,5],desc:'Use [metal tools], [herb]s, [fruit], and [water] to heal sick and wounded people faster.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
+        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':2.5},into:{'adult':1},chance:1/3,every:4,mode:'heal'});
+        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':2.5},into:{'adult':1},chance:1/4,every:3,mode:'heal'});
+        G.getDict('healer').effects.push({type:'convert',from:{'sick':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:5/8,every:2});
+        G.getDict('healer').effects.push({type:'convert',from:{'wounded':1,'herb':5,'fruit':1,'water':5},into:{'adult':1},chance:1/2,every:2});
+        
         // Add new techs.
         // Gun smithing tech, allows blacksmiths to make guns.
         new G.Tech({
