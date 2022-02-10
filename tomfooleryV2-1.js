@@ -21,6 +21,13 @@ G.AddData({
            displayUsed: true,
            category:'gear'
         });
+        // Nuke resource, kills everyone.
+        new G.Res({
+           name:'nuke',
+           desc:'boom',
+           icon:[5,4],
+           category:'misc'
+        });
         
         // Augment base data for Blacksmith Workshop to allow for gun smithing.
         G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
