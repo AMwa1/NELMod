@@ -42,7 +42,7 @@ G.AddData({
                {type:'gather',what:{'science':0.12}},
                {type:'mult',value:1.07,req:{'wisdom rituals':'on'}}
            ],
-           req:'neverending quest for knowledge',
+           req:{'neverending quest for knowledge':true},
            category:'discovery',
            priority:6
         });
