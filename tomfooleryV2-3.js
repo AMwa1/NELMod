@@ -42,7 +42,7 @@ G.AddData({
                {type:'gather',what:{'science':0.12}},
                {type:'mult',value:1.07,req:{'wisdom rituals':'on'}}
            ],
-           req:'science',
+           req:'neverending quest for knowledge',
            category:'discovery',
            priority:6
         });
@@ -93,7 +93,7 @@ G.AddData({
         });
         // Science tech, allows for use of un-impliented default resources; science and education.
         new G.Tech({
-            name:'science',
+            name:'neverending quest for knowledge',
             desc:'The beginning of science and the neverending quest to understand everything. @Provides 15 [education] @Unlocks [scientist]',
             icon:[6,4],
             cost:{'insight':75},
