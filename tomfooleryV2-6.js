@@ -88,7 +88,7 @@ G.AddData({
            name:'gun smithing',
            desc:'[blacksmith workshop]s can now make [gun]s. Unlocks a new mode for @[hunter].',
            icon:[9, 5],
-           cost:{'insight':50},
+           cost:{'insight':50,'science':7},
            req:{'iron-working':true, 'bows':true}
         });
         // Science tech, allows for use of un-impliented default resources; science and education.
