@@ -29,6 +29,24 @@ G.AddData({
            category:'misc'
         });
         
+        // Add new units.
+        // Scientist unit. Generates science.
+        new G.Unit({
+           name:'scientist',
+           desc:'A person dedicated to science to guide your tribe. Generates [science].',
+           icon:[6,4],
+           cost:{},
+           use:{'worker':1},
+           upkeep:{},
+           effects:[
+               {type:'gather',what:{'science':0.12}},
+               {type:'mult',value:1.07,req:{'wisdom rituals':'on'}}
+           ],
+           req:'science',
+           category:'discovery',
+           priority:6
+        });
+        
         // Augment base data for Blacksmith Workshop to allow for gun smithing.
         G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
         G.getDict('blacksmith workshop').effects.push({type:'convert', from:{'hard metal ingot':3}, into:{'gun':1}, every:6,mode:'make gun'});
@@ -72,6 +90,18 @@ G.AddData({
            icon:[9, 5],
            cost:{'insight':50},
            req:{'iron-working':true, 'bows':true}
+        });
+        // Science tech, allows for use of un-impliented default resources; science and education.
+        new G.Tech({
+            name:'science',
+            desc:'The beginning of science and the neverending quest to understand everything. @Provides 15 [education] @Unlocks [scientist]',
+            icon:[6,4],
+            cost:{'insight':75},
+            effects:[
+                {type:'provide res',what:{'education':15}},
+                {type:'show res',what:['science']}
+            ],
+            req:{'symbolism':true}
         });
     } 
 });
