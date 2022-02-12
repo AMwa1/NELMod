@@ -77,13 +77,13 @@ G.AddData({
         // Augment base data for Hunter to add shoot to hunt mode and other stuff.
         G.getDict('hunter').modes['shoot']={name:'Shoot',icon:[5,5],desc:'Use [gun]s to shoot prey.',use:{'worker':1,'gun':1}};
         G.getDict('hunter').effects.push({type:'gather',context:'hunt',amount:7,max:9,mode:'shoot'});
-        G.getDict('hunter').effects.push({type:'mult',value:1.5,req:'applying biology':true});
+        G.getDict('hunter').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Fisher.
-        G.getDict('fisher').effects.push({type:'mult',value:1.5,req:'applying biology':true});
+        G.getDict('fisher').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Gatherer.
-        G.getDict('gatherer').effects.push({type:'mult',value:1.5,req:'applying biology':true});
+        G.getDict('gatherer').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Woodcutter to allow use of stone and metal tools, not just knapped tools.
         wipeAndGizmo('woodcutter');
