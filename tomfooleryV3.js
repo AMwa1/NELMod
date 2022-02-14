@@ -69,7 +69,21 @@ G.AddData({
             category:'spiritual',
             priority:7
         });
-        
+        // Nuclear factory
+        new G.Unit({
+            name:'nuclear factory',
+            desc:'A factory, staffed by five workers, dedicated to the construction of [nuke]s.',
+            icon:[5,4],
+            cost:{},
+            use:{'worker':5,'metal tools':5},
+            upkeep:{},
+            effects:[
+                {type:'convert',from:{'stone':100},into:{'nuke':1},chance:1/3,every:5},
+            ],
+            req:{'nuclear science':true},
+            category:'spiritual',
+            priority:7
+        });
         // Augment base data for Blacksmith Workshop to allow for gun smithing.
         G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
         G.getDict('blacksmith workshop').effects.push({type:'convert', from:{'hard metal ingot':3}, into:{'gun':1}, every:6,mode:'make gun'});
@@ -183,6 +197,13 @@ G.AddData({
             icon:[6,4],
             cost:{'insight':20,'science':15},
             req:{'biology':true}
+        });
+        new G.Tech({
+            name:'nuclear science',
+            desc:'The beginning of the end of your civilization. Allows construction of: @[nuke]',
+            icon:[5,4],
+            cost:{'science':20},
+            req:{'physics':true}
         });
     }
 });
