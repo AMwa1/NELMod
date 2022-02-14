@@ -59,7 +59,7 @@ G.AddData({
             desc:'A person who dedicates their life to helping the sick and wounded through science. Uses [medicine] to heal [sick] and [wounded]. Far more efficent than healers.',
             icon:[9,5],
             cost:{},
-            use:{'worker':1},
+            use:{'worker':1,'metal tools':1},
             upkeep:{},
             effects:[
                 {type:'convert',from:{'sick':1,'medicine':1},into:{'adult':1},chance:2/3,every:1.8},
