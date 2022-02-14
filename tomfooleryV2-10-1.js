@@ -66,7 +66,7 @@ G.AddData({
                 {type:'convert',from:{'wounded':1,'medicine':2},into:{'adult':1},chance:3/4,every:2}
             ],
             req:{'medical study':true},
-            category:'',
+            category:'spiritual',
             priority:7
         });
         
@@ -141,7 +141,7 @@ G.AddData({
         // Physics tech, allows for more science stuff.
         new G.Tech({
             name:'physics',
-            desc:'How things move, forces, and a lot of other stuff that the general population really dosen\'t feel like trying to understand.',
+            desc:'How things move, forces, and a lot of other stuff that the general population really doesn\'t feel like trying to understand.',
             icon:[6,4],
             cost:{'insight':10,'science':10},
             effects:[
@@ -171,7 +171,7 @@ G.AddData({
         // Med School tech, allows for doctors, a better form of healers.
         new G.Tech({
             name:'medical study',
-            desc:'While it\'s not the most exiting thing, it will definetly be better for your tribe when [doctor]s start treating your [sick] and [wounded] with an almost 100% chance to succeed. @Unlocks [doctor] @Unlocks new mode for [healer], which lets them make medicine for [doctor]s',
+            desc:'While it\'s not the most exciting thing, it will definitely be better for your tribe when [doctor]s start treating your [sick] and [wounded] with an almost 100% chance to succeed. @Unlocks [doctor] @Unlocks new mode for [healer], which lets them make medicine for [doctor]s',
             icon:[6,4],
             cost:{'insight':15,'science':20},
             req:{'biology':true,'chemistry':true}
@@ -179,7 +179,7 @@ G.AddData({
         // Applying Biology tech, increases effectivness of gatherers, hunters, and fishermen.
         new G.Tech({
             name:'applying biology',
-            desc:'Now that you know of biology, might as well put it to use. This tech increases the effectivness of: @[hunter]@[gatherer]@[fisher]',
+            desc:'Now that you know of biology, might as well put it to use. This tech increases the effectiveness of: @[hunter]@[gatherer]@[fisher]',
             icon:[6,4],
             cost:{'insight':20,'science':15},
             req:{'biology':true}
