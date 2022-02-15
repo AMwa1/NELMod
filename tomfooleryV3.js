@@ -105,6 +105,7 @@ G.AddData({
         
         // Augment base data for Healer to allow for better healing as tech progresses.
         wipeAndGizmo('healer');
+        G.getDict('healer').effects=[];
         G.getDict('healer').modes['heal']={name:'Heal',icon:[23,3],desc:'Use [knapped tools] and [herb]s to slowly heal sick and wounded people.',use:{'worker':1,'knapped tools':1}};
         G.getDict('healer').modes['better heal']={name:'Better Healing',icon:[9,5],desc:'Use [metal tools], [herb]s, [fruit], and [water] to heal sick and wounded people faster.',use:{'worker':1,'metal tools':1},req:{'smelting':true}};
         G.getDict('healer').modes['make medicine']={name:'Produce Medicine',icon:[6,4],desc:'Use [herb]s and other chemicals to make [medicine] for [doctor]s.',use:{'worker':1,'metal tools':1},req:{'medical study':true}};
