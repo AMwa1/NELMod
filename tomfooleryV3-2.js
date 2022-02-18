@@ -178,12 +178,13 @@ G.AddData({
             req:{'biology':true,'chemistry':true}
         });
         // Applying Biology tech, increases effectivness of gatherers, hunters, and fishermen.
-        new G.Tech({
+        // This needs to work better.
+        /*new G.Tech({
             name:'applying biology',
             desc:'Now that you know of biology, might as well put it to use. This tech increases the effectiveness of: @[hunter]@[gatherer]@[fisher]',
             icon:[6,4],
             cost:{'insight':20,'science':15},
             req:{'biology':true}
-        });
+        });*/
     }
 });
