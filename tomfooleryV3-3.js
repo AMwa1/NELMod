@@ -6,11 +6,12 @@ function wipeAndGizmo(unit){
 
 G.AddData({
     name:'tomfoolery',
-    author:'AMwa1',
+    author:'AMwa1+crazybot27',
     desc:'A mod that engages in a high level of tomfoolery.',
     engineVersion:1,
     manifest:'ModManifest.js',
     requires:['Default dataset*'],
+    sheets:{},
     func:function(){
         // Add new resources.
         // Gun resource, a type of gear that can be used for hunting and obtained via blacksmiths.
