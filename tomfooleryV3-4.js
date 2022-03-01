@@ -11,14 +11,14 @@ G.AddData({
     engineVersion:1,
     manifest:'ModManifest.js',
     requires:['Default dataset*'],
-    sheets:{},
+    sheets:{'tomfoolerySheet':'https://file.garden/Yh6aQnZFah3TM9wh/tomfoolerySheet.png'},
     func:function(){
         // Add new resources.
         // Gun resource, a type of gear that can be used for hunting and obtained via blacksmiths.
         new G.Res({
             name:'gun',
             desc: 'pew',
-            icon:[0,0,'gun'],
+            icon:[0,0,'tomfoolerySheet'],
             displayUsed: true,
             category:'gear'
         });
@@ -26,7 +26,7 @@ G.AddData({
         new G.Res({
             name:'nuke',
             desc:'boom',
-            icon:[5,4],
+            icon:[1,0,'tomfoolerySheet'],
             category:'misc'
         });
         // Medicine resource, used by doctors to heal people.
@@ -72,19 +72,19 @@ G.AddData({
         });
         
         // Augment base data for Blacksmith Workshop to allow for gun smithing.
-        G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[5,5],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
+        G.getDict('blacksmith workshop').modes['make gun']={name:'Make guns',icon:[0,0,'tomfoolerySheet'],desc:'Use 3 [hard metal ingot]s to make 1 [gun].',req:{'gun smithing':true}, use:{'worker':1,'metal tools':1}};
         G.getDict('blacksmith workshop').effects.push({type:'convert', from:{'hard metal ingot':3}, into:{'gun':1}, every:6,mode:'make gun'});
         
         // Augment base data for Hunter to add shoot to hunt mode and other stuff.
-        G.getDict('hunter').modes['shoot']={name:'Shoot',icon:[5,5],desc:'Use [gun]s to shoot prey.',use:{'worker':1,'gun':1}};
+        G.getDict('hunter').modes['shoot']={name:'Shoot',icon:[0,0,'tomfoolerySheet'],desc:'Use [gun]s to shoot prey.',use:{'worker':1,'gun':1}};
         G.getDict('hunter').effects.push({type:'gather',context:'hunt',amount:7,max:9,mode:'shoot'});
         G.getDict('hunter').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Fisher.
-        G.getDict('fisher').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
+        //G.getDict('fisher').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Gatherer.
-        G.getDict('gatherer').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
+        //G.getDict('gatherer').effects.push({type:'mult',value:1.5,req:{'applying biology':true}});
         
         // Augment base data for Woodcutter to allow use of stone and metal tools, not just knapped tools.
         wipeAndGizmo('woodcutter');
@@ -166,7 +166,7 @@ G.AddData({
         new G.Tech({
             name:'gun smithing',
             desc:'By using things like gunpowder and iron and putting them in a piece of metal with a trigger, you can create a pretty efficent weapon. @[blacksmith workshop]s can now make [gun]s. @Unlocks a new mode for [hunter].',
-            icon:[9, 5],
+            icon:[0,0,'tomfoolerySheet'],
             cost:{'insight':50,'science':7},
             req:{'iron-working':true, 'bows':true, 'physics':true, 'chemistry':true}
         });
