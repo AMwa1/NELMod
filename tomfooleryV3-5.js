@@ -58,7 +58,7 @@ G.AddData({
         new G.Unit({
             name:'doctor',
             desc:'A person who dedicates their life to helping the sick and wounded through science. Uses [medicine] to heal [sick] and [wounded]. Far more efficent than healers.',
-            icon:[9,5],
+            icon:[2,0,'tomfoolerySheet'],
             cost:{},
             use:{'worker':1,'metal tools':1},
             upkeep:{},
